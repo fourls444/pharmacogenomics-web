@@ -1,77 +1,166 @@
 .section {
     padding: 0;
     background: transparent;
+    width: 100%;
 }
 
+/* ===================== HEADER ===================== */
 .header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .header h2 {
-    font-size: 22px;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .header p {
     font-size: 14px;
-    color: #666;
-    line-height: 1.8;
-    max-width: 900px;
+    color: #777;
+    line-height: 1.7;
+    max-width: 800px;
     margin: 0 auto;
+    font-style: italic;
 }
 
-.presidentWrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+/* ===================== CARD ===================== */
+.card {
+    width: 190px;
+    border-radius: 16px;
+    overflow: hidden;
+   
+    position: relative;
+    
+  
+    /* bg only top-right corner, not full cover */
+    background-image: url('/images/committee/bgcom.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100% 65%;
 }
 
-.presidentCard {
-    width: 320px;
-    text-align: center;
+.card:hover {
+    transform: translateY(-4px);
+  
 }
 
-.presidentCard img {
+/* ===================== PHOTO AREA ===================== */
+.photoArea {
     width: 100%;
+    aspect-ratio: 1 / 1.15;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.memberPhoto {
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom center;
     display: block;
 }
 
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.card {
-    width: calc(16.666% - 13px); /* 6 columns layout based on image count */
-    min-width: 140px;
-    text-align: center;
+/* ===================== NAME AREA ===================== */
+.nameArea {
+    padding: 10px 14px 14px 14px;
     display: flex;
     flex-direction: column;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0 14px 14px 14px;
+    border-radius: 16px;
 }
 
-.card img {
-    width: 100%;
-    display: block;
+.memberName {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* RESPONSIVE */
+.memberRole {
+    font-size: 11px;
+    color: #888;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* ===================== CHAIRMAN ===================== */
+.chairmanRow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.chairmanCard {
+    width: 280px;
+}
+
+.chairmanCard .photoArea {
+    aspect-ratio: 1 / 1.2;
+}
+
+.chairmanCard .nameArea {
+    padding: 14px 18px 18px 18px;
+    margin: 0 14px 14px 14px;
+    border-radius: 16px;
+}
+
+.chairmanCard .memberName {
+    font-size: 16px;
+}
+
+.chairmanCard .memberRole {
+    font-size: 13px;
+}
+
+/* ===================== MEMBERS ROW ===================== */
+.membersRow {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .header h2 {
-        font-size: 18px;
+        font-size: 22px;
     }
-    
-    .presidentCard {
-        width: 100%;
-        max-width: 280px;
+
+    .membersRow {
+        gap: 14px;
     }
 
     .card {
-        width: calc(50% - 10px); /* 2 columns on mobile */
+        width: 160px;
+    }
+
+    .chairmanCard {
+        width: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(50% - 10px);
+    }
+
+    .chairmanCard {
+        width: 200px;
+    }
+
+    .membersRow {
+        gap: 10px;
     }
 }

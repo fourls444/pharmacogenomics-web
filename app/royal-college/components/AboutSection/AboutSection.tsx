@@ -1,45 +1,64 @@
-import styles from "./AboutSection.module.css";
+"use client";
 
-const STATS = [
-    { value: "7", label: "วิทยาลัยเฉพาะทาง", icon: "/images/home/icon9.png" },
-    { value: "1500+", label: "สมาชิกทั่วประเทศ", icon: "/images/home/icon10.png" },
-    { value: "200+", label: "หลักสูตรอบรม/ปี", icon: "/images/home/icon9.png" },
-    { value: "50+", label: "งานวิจัยตีพิมพ์/ปี", icon: "/images/home/icon11.png" },
-];
+import styles from "./AboutSection.module.css";
+import { FaSearch } from "react-icons/fa";
+import { LuListFilter, LuChevronDown } from "react-icons/lu";
 
 export default function AboutSection() {
-    return (
-        <section className={styles.aboutSection}>
+  return (
+    <section className={styles.container}>
+      {/* Left Column: Image Card */}
+      <div className={styles.imageSection}>
+        <div className={styles.imageCard}>
+          <img
+            src="/images/home/Container.png"
+            alt="Pharmacy Practice"
+            className={styles.image}
+          />
+          <div className={styles.imageOverlay}>
+            <h3 className={styles.overlayTitle}>วิทยาลัยคุ้มครองผู้บริโภคด้านยา</h3>
+            <p className={styles.overlaySubtitle}>
+              (The College of Pharmaceutical and Health Consumer Protection of Thailand : CPHCP)
+            </p>
+          </div>
+        </div>
+      </div>
 
-            {/* LEFT IMAGE */}
-            <div className={styles.imageBox}>
-                <img src="/images/home/Container.png" alt="group" />
+      {/* Right Column: Text & Search */}
+      <div className={styles.contentSection}>
+        <h2 className={styles.headline}>
+          “วิทยาลัยเภสัชพันธุศาสตร์และเภสัชกรรมแม่นยำ (วภพ.) 
+          
+        </h2>
+        <p className={styles.description}>
+          ยกระดับการบริบาลทางเภสัชกรรม สู่ยุคการแพทย์เฉพาะบุคคล (Personalized Medicine) เพื่อความปลอดภัยสูงสุดของผู้ป่วย
+        </p>
+
+        {/* Search Card */}
+        <div className={styles.searchCard}>
+          <h3 className={styles.searchTitle}>ค้นหารายชื่อ</h3>
+          <p className={styles.searchSubtitle}>ผู้ประกอบวิชาชีพเภสัชกรรม</p>
+
+          <div className={styles.inputGroup}>
+            <div className={styles.dropdown}>
+              <LuListFilter className={styles.filterIcon} />
+              <span>เลขที่ใบอนุญาต</span>
+              <LuChevronDown className={styles.chevronIcon} />
+            </div>
+            
+            <div className={styles.searchInputWrapper}>
+              <FaSearch className={styles.searchIcon} />
+              <input
+                type="text"
+                placeholder="ค้นหาเลขที่ใบอนุญาต"
+                className={styles.searchInput}
+              />
             </div>
 
-            {/* RIGHT CONTENT */}
-            <div className={styles.content}>
-                <p>
-                    ราชวิทยาลัยเภสัชกรรมแห่งประเทศไทย ก่อตั้งขึ้นตามปณิธาน
-                    ที่มุ่งมั่นของสภาเภสัชกรรมเพื่อเป็นองค์กรหลักในการกำกับดูแล
-                    มาตรฐานทางวิชาการ และพัฒนาทักษะวิชาชีพเชิงลึก โดยการรวมกลุ่มของวิทยาลัยชำนาญการทั้ง 7 สาขา มุ่งเน้น
-                    การสร้างผู้เชี่ยวชาญที่มีความรู้ความสามารถเป็นที่ยอมรับ
-                    ในระดับสากลเพื่อสวัสดิการและสุขภาวะที่ดีของประชาชน
-                </p>
-
-                {/* STATS */}
-                <div className={styles.stats}>
-                    {STATS.map((stat, index) => (
-                        <div key={index} className={styles.statCard}>
-                            <div className={styles.statContent}>
-                                <h3>{stat.value}</h3>
-                                <p>{stat.label}</p>
-                            </div>
-                            <img src={stat.icon} alt="" />
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-        </section>
-    );
+            <button className={styles.searchButton}>ค้นหา</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

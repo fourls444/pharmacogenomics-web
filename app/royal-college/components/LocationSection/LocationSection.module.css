@@ -1,54 +1,121 @@
 .section {
     padding: 0;
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* ===================== LEFT COLUMN ===================== */
+.leftColumn {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mainImage {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+}
+
+.leftText {
+    padding: 20px 4px;
+}
+
+.leftText h3 {
+    font-size: 27px;
+    font-weight: 400;
+    color: #111;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.leftText p {
+    font-size: 17px;
+    color: #777;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 100;
+    
+}
+
+/* ===================== RIGHT COLUMN ===================== */
+/* Full olive green gradient card */
+.rightColumn {
+    background: linear-gradient(to bottom right, #5C5C39 0%, #8D8D47 49%, #A4A422 99%);
+    border-radius: 16px;
+    padding: 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rightTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ===================== CONTACT LIST ===================== */
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contactItem {
+    display: flex;
+    gap: 12px;
     align-items: flex-start;
 }
 
-/* LEFT COLUMN */
-.leftColumn {
-    flex: 1;
+.contactIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
 }
 
-.topImage {
-    width: 100%;
-    border-radius: 16px;
-    object-fit: cover;
+.contactItem h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 3px 0;
+    line-height: 1.3;
 }
 
-/* Removed unused .leftText styles */
-
-/* RIGHT COLUMN */
-.rightColumn {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+.contactItem p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    line-height: 1.6;
+    word-break: break-word;
 }
 
-.rightImage {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-}
-
-/* RESPONSIVE DESIGN */
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .leftColumn, .rightColumn {
-        width: 100%;
+    .rightTitle {
+        font-size: 18px;
+    }
+
+    .rightColumn {
+        padding: 20px 20px;
     }
 }
