@@ -191,7 +191,7 @@
 }
 
 .quoteCard {
-    background: linear-gradient(145deg, #4a5520 0%, #5e6328 40%, #3d4218 100%);
+    background: url("/images/vision/bg.png") center/cover no-repeat;
     border-radius: 14px;
     padding: 36px 32px;
     display: flex;
@@ -200,7 +200,7 @@
 }
 
 .quoteCard p {
-    color: #e8e8c8;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.8;
