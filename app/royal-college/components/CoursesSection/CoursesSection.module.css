@@ -184,7 +184,7 @@
 
 /* ===================== CERTIFICATION FOOTER ===================== */
 .certFooter {
-    background: linear-gradient(to top right, #5C5C39 0%, #8D8D47 49%, #A4A422 99%);
+    background: url("/images/courses/bg.png") center/cover no-repeat;
     border-radius: 16px;
     padding: 32px 36px;
     display: flex;
