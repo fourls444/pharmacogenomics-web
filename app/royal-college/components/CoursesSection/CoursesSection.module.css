@@ -18,6 +18,31 @@
     line-height: 1.7;
 }
 
+.rowHeader{
+    border-left: 5px solid #7a7536;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+    padding-left: 12px;
+    display: flex;
+}
+
+.viewAllBtn{
+    background: linear-gradient(to right, #8a8a3a 0%, #a0a050 100%);
+    border-top-color: transparent;
+    color: #fff;color: #64748b;
+    cursor: pointer;
+    background: 0 0;
+    border: none;
+    align-items: center;
+    gap: .25rem;
+    padding: 0;
+    font-size: 14.5px;
+    font-weight: 700;
+    transition: all .2s;
+    display: flex;
+}
+
 /* ===================== CARDS ROW ===================== */
 .cardsRow {
     display: grid;
