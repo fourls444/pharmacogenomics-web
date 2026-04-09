@@ -10,6 +10,9 @@ const RegistrationModal = () => {
   const [error, setError] = useState("");
   const [triedSubmit, setTriedSubmit] = useState(false);
 
+
+  {/* popup หลอก*/}
+
   useEffect(() => {
     // Always show modal on refresh/mount and clear existing data
     localStorage.removeItem("user_registration_info");

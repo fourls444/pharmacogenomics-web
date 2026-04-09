@@ -2,19 +2,19 @@ import styles from "./NewsSection.module.css";
 
 const NEWS_ITEMS = [
     {
-        image: "/images/section4/Container1.png",
+        image: "/images/news/Container1.png",
         title: "วภพ. จัดอบรมเชิงปฏิบัติการ: การอ่านผลตรวจยีนสำหรับเภสัชกร",
         description:
             "โครงการพัฒนาเภสัชกร: การใช้ยาอย่างมีประสิทธิภาพในผู้ป่วยมะเร็ง",
     },
     {
-        image: "/images/section4/Container2.png",
+        image: "/images/news/Container2.png",
         title: "วภพ. เปิดรับสมัคร: หลักสูตรการจัดการข้อมูลเภสัชพันธุศาสตร์ ปี 71",
         description:
             "อบรม 12 สัปดาห์: การให้คำปรึกษาด้านเภสัชพันธุศาสตร์",
     },
     {
-        image: "/images/section4/Container3.png",
+        image: "/images/news/Container3.png",
         title: "วภพ. จัดสัมมนา: เทรนด์ใหม่การใช้ยาเฉพาะบุคคล",
         description:
             "อบรมระยะสั้น 16 สัปดาห์: การใช้เทคโนโลยี AI ในร้านยา",
@@ -27,7 +27,7 @@ export default function NewsSection() {
             <div className={styles.newsContainer}>
                 {/* HIGHLIGHTS */}
                 <div className={styles.newsHeader}>
-                    <h2>เรื่องเด่น</h2>
+                    <h2>เรื่องเด่นวิทยาลัยเภสัชพันธุศาสตร์และเภสัชกรรมแม่นยำ</h2>
                     <div className={styles.newsNav}>
                         <button className={styles.navBtn}>&lt;</button>
                         <button className={styles.navBtn}>&gt;</button>
@@ -36,7 +36,7 @@ export default function NewsSection() {
 
                 <div className={styles.featuredCard}>
                     <div className={styles.featuredImage}>
-                        <img src="/images/section4/img.png" alt="featured" />
+                        <img src="/images/news/img.png" alt="featured" />
                     </div>
                     <div className={styles.featuredContent}>
                         <div className={styles.tagOlive}>ข่าวประชาสัมพันธ์</div>
@@ -56,7 +56,7 @@ export default function NewsSection() {
 
                 {/* NEWS */}
                 <div className={styles.newsRowHeader}>
-                    <h2>ข่าวสาร</h2>
+                    <h2>ข่าวสารวิทยาลัยเภสัชพันธุศาสตร์และเภสัชกรรมแม่นยำ</h2>
                     <span className={styles.viewAll}>ดูทั้งหมด &gt;</span>
                 </div>
 
