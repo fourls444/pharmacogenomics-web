@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import styles from "./CollegesSection.module.css";
+import styles from "./HighlightSection.module.css";
 
 const CARDS = [
     { id: 1, src: "/images/highlight/card1.jpg" },
